@@ -14,7 +14,7 @@ Nico Kluge (klugecoded GmbH) hat die erste Fassung 2023 im Auftrag programmiert,
 
 ## Gestaltung und Tests
 
-Wolli Ruf hat CSS beigesteuert und die Darstellung auf Mobilgeräten getestet.
+Wolli Ruf hat CSS beigesteuert und die Darstellung auf Mobilgeräten getestet. Britta Seidl hat Funktion und Bedienbarkeit getestet.
 
 ## KI-Einsatz
 
