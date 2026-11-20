@@ -9,7 +9,7 @@ Ein Meldeportal nach HinSchG muss zweierlei schützen: die Identität der melden
 - **Anmeldung des Teams:** Passwort mit zweitem Faktor oder ein Passkey; Fehlversuche verlängern die Wartezeit. Neue Zugänge und vergessene Passwörter brauchen die Freigabe durch ein anderes Mitglied, ein übernommenes Postfach allein öffnet also keine Meldung. Rollen begrenzen, wer welche Meldungen sieht.
 - **Verschlüsselung:** Titel und Nachrichtentexte liegen verschlüsselt auf dem Server (siehe unten).
 - **Anfragen fremder Seiten:** Formulare im Team-Bereich prüfen die Herkunft der Anfrage; Sitzungscookies sind `SameSite=Strict`.
-- **Löschen:** Im Portal braucht eine Löschung zwei Personen; der Fristen-Wächter löscht Meldungen 3 Jahre nach Abschluss, mit Ankündigung an das Team.
+- **Löschen:** Im Portal braucht eine Löschung zwei Personen, außer bei Test-Meldungen (eine Person, das übrige Team erhält eine Mail); der Fristen-Wächter löscht Meldungen 3 Jahre nach Abschluss, mit Ankündigung an das Team.
 
 Anmeldung im Portal und Verschlüsselung gelten für Portale mit `"Anmeldung": "portal"` (README, „Anmeldung und Verschlüsselung“). Code: `portal/common/crypto.php`, `portal/common/auth.php`, `portal/team/webauthn.php`.
 
@@ -164,6 +164,6 @@ Ergebnis des Security-Reviews vom 18.11.2026, keiner der Punkte erreichte die Me
 
 ## Sicherheitslücken melden
 
-Fehler und Schwächen, die sich leicht beheben lassen oder nur Sonderfälle treffen, bitte als [Issue](https://github.com/datenschutz-individuell/hinschg-meldekanal/issues) melden. Lücken, durch die Meldungen lesbar werden, die Anmeldung umgangen werden kann oder die viele Portale treffen, bitte nicht öffentlich, sondern per Mail an [security@hinwei.se](mailto:security@hinwei.se).
+Fehler und Schwächen, die sich leicht beheben lassen oder nur Sonderfälle treffen, bitte als [Issue](https://github.com/datenschutz-individuell/hinschg-meldekanal/issues) melden. Lücken, durch die Meldungen lesbar werden, die Anmeldung umgangen werden kann oder die viele Portale treffen, bitte nicht öffentlich, sondern per Mail an [security@hinwei.se](mailto:security@hinwei.se) oder vertraulich über GitHub ([Report a vulnerability](https://github.com/datenschutz-individuell/hinschg-meldekanal/security/advisories/new)).
 
 Unterstützt wird nur der aktuelle Stand von `main`; bitte vorher prüfen, ob die Lücke dort noch besteht. Wir prüfen jede Meldung zügig und beheben, was in unserer Hand liegt. Bitte Kontaktdaten für Rückfragen angeben und sagen, ob und wie Sie in [CONTRIBUTORS.md](CONTRIBUTORS.md) genannt werden möchten. Eine Prämie können wir nicht zahlen.
