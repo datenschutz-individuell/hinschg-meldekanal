@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "type": "module",
+  "description": "End-to-end tests of the whistleblowing portal (portal-e2e.mjs, firefox-keepassxc.mjs)",
+  "dependencies": {
+    "playwright-core": "1.65.1",
+    "puppeteer-core": "25.18.1"
+  }
+}

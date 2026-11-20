@@ -1,0 +1,57 @@
+# SPDX-FileCopyrightText: 2026 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>
+# SPDX-License-Identifier: LicenseRef-hinschg-meldekanal
+
+name: 🐛 Fehler
+description: Etwas im Portal funktioniert nicht wie erwartet
+labels: [ bug ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Nur, was zum Nachstellen nötig ist. Bitte keine Inhalte echter Meldungen, Zugangscodes,
+        Passwörter oder Mailadressen einfügen.
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zum Nachstellen
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Was Sie erwartet haben
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Was stattdessen passiert ist
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Stand des Portals
+      description: Commit oder Datum der Installation; dazu Teil des Portals (Melden, Bearbeiten, Team, Fristen-Wächter)
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser oder Server
+      description: Browser und Version bei Darstellungsfehlern; PHP-Version und Webserver bei Serverfehlern
+
+  - type: textarea
+    id: anything-else
+    attributes:
+      label: Was sonst wichtig sein könnte
+      description: Fehlermeldung, Protokollzeilen, Bildschirmfoto, ob es nach einem Update begann.

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" width="220" height="56"><style>@media (prefers-color-scheme:dark){[fill="#1f2937" i]{fill:#f3f4f6}[stroke="#1f2937" i]{stroke:#f3f4f6}[stop-color="#1f2937" i]{stop-color:#f3f4f6}[flood-color="#1f2937" i]{flood-color:#f3f4f6}[fill="#6b7280" i]{fill:#9ca3af}[stroke="#6b7280" i]{stroke:#9ca3af}[stop-color="#6b7280" i]{stop-color:#9ca3af}[flood-color="#6b7280" i]{flood-color:#9ca3af}[fill="#0f766e" i]{fill:#2dd4bf}[stroke="#0f766e" i]{stroke:#2dd4bf}[stop-color="#0f766e" i]{stop-color:#2dd4bf}[flood-color="#0f766e" i]{flood-color:#2dd4bf}}</style>
+  <g fill="#0f766e">
+    <path d="M6 14 L24 6 L42 14 L24 22 Z"/>
+    <path d="M6 22 L24 30 L42 22 L42 30 L24 38 L6 30 Z" fill="#14b8a6"/>
+    <path d="M6 34 L24 42 L42 34 L42 42 L24 50 L6 42 Z"/>
+  </g>
+  <text x="52" y="38" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="2" fill="#1f2937">EPOSS</text>
+  <text x="54" y="51" font-family="Arial, Helvetica, sans-serif" font-size="9" letter-spacing="1.5" fill="#6b7280">PRODUKTE FÜR DEN HANDEL</text>
+</svg>

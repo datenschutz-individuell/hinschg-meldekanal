@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: 2026 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>
+# SPDX-License-Identifier: LicenseRef-hinschg-meldekanal
+[Unit]
+Description=Hinweisportal %i: Fristen nach HinSchG melden
+Documentation=https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/README.md
+
+[Service]
+Type=oneshot
+# Per-portal variant for one PHP pool per portal: instance = portal folder, user = the pool user
+# owning <wurzel>/<kunde>; group = web server, which reads passwd (0640). Instead of hinweise-deadlines.service.
+User=hinweise-%i
+Group=http
+# HINWEISE_WURZEL, FRISTEN_AN, optional FRISTEN_INTERN and FRISTEN_BEFEHL (example: hinweise-deadlines.env.example);
+# the script also reads the file on manual calls
+EnvironmentFile=/etc/hinweise-deadlines.env
+ExecStart=/usr/bin/php /usr/local/bin/hinweise-deadlines --mail --kunde %i
+# Own state per portal: pools must not change each other's postponements; manual calls find it too
+StateDirectory=hinweise-deadlines/%i
+StateDirectoryMode=0700
+UMask=0077
+# sendmail hands over to Postfix via setgid postdrop: hence no NoNewPrivileges, maildrop writable
+ReadWritePaths=/var/spool/postfix/maildrop
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+LockPersonality=yes
+PrivateDevices=yes
+CapabilityBoundingSet=
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+ProtectClock=yes
+ProtectHostname=yes
+ProtectKernelLogs=yes
+SystemCallArchitectures=native

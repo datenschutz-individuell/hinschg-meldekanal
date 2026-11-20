@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>
+# SPDX-License-Identifier: LicenseRef-hinschg-meldekanal
+
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Sicherheitslücke
+    url: https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/SECURITY.md#sicherheitslücken-melden
+    about: Bitte vertraulich melden, nicht als öffentliches Issue.

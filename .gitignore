@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2023 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>
+# SPDX-License-Identifier: LicenseRef-hinschg-meldekanal
+cases/
+passwd
+/settings.json
+/index.php
+/style.css
+/logo*.svg
+/logo*.webp
+__pycache__/
+tests/e2e/node_modules/
+ALT/

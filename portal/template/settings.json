@@ -1,0 +1,17 @@
+{
+  "Firma": "FIRMA",
+  "Title": "Interne Meldestelle nach HinSchG",
+  "Level": "optional",
+  "Webseite": "https://FIRMA.de/",
+  "Impressum": "https://FIRMA.de/impressum",
+  "Team": "Vorname Nachname und Vorname Nachname",
+  "Anschrift": "Straße 1, 12345 Ort<br>info@FIRMA.de<br>+49 1234 5678-0",
+  "DS-Mail": "datenschutz@FIRMA.de",
+  "Anmeldung": "portal",
+  "Sprachen": [
+    "de"
+  ],
+  "Sprachen_in_Pruefung": [
+    "en"
+  ]
+}

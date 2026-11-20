@@ -1,0 +1,34 @@
+# SPDX-FileCopyrightText: 2026 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>
+# SPDX-License-Identifier: LicenseRef-hinschg-meldekanal
+version = 1
+SPDX-PackageName = "hinschg-meldekanal"
+SPDX-PackageSupplier = "Olav Seyfarth <olav.seyfarth@datenschutz-individuell.de>"
+SPDX-PackageDownloadLocation = "https://github.com/datenschutz-individuell/hinschg-meldekanal"
+
+[[annotations]]
+# Files that cannot carry a header: docs, JSON, images.
+path = ["**.md", "**.json", "**.svg", "**.ico", "**.png", "**.webp", "**.xml", "**.webmanifest", "resources/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023-2026 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>"
+SPDX-License-Identifier = "LicenseRef-hinschg-meldekanal"
+
+[[annotations]]
+# WebAuthn server library lbuchs/WebAuthn v2.2.0, unchanged (https://github.com/lbuchs/WebAuthn).
+path = ["portal/common/vendor/WebAuthn/**"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2022 Lukas Buchs", "2018 Thomas Bleeker"]
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+# QR code generator qrcode-generator 1.4.4 by Kazuhiko Arase, unchanged (https://github.com/kazuhikoarase/qrcode-generator).
+path = ["portal/common/qrcode.js"]
+precedence = "override"
+SPDX-FileCopyrightText = "2009 Kazuhiko Arase"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+# Speech bubble icon: own drawing (2023); the favicons are generated from it (realfavicongenerator.net).
+path = ["resources/Favicon/**", "portal/common/favicon.ico"]
+precedence = "override"
+SPDX-FileCopyrightText = "2023 Olav Seyfarth"
+SPDX-License-Identifier = "LicenseRef-hinschg-meldekanal"

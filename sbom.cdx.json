@@ -1,0 +1,43 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "bom-ref": "hinschg-meldekanal",
+      "name": "hinschg-meldekanal",
+      "version": "0.6",
+      "supplier": { "name": "Olav Seyfarth", "url": ["https://datenschutz-individuell.de"] },
+      "licenses": [ { "license": { "name": "LicenseRef-hinschg-meldekanal", "url": "https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/LICENSE.md" } } ],
+      "externalReferences": [ { "type": "vcs", "url": "https://github.com/datenschutz-individuell/hinschg-meldekanal" } ]
+    },
+    "properties": [ { "name": "requires", "value": "PHP >= 8.4 with mbstring, json, sodium, openssl (not bundled)" } ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:composer/lbuchs/webauthn@2.2.0",
+      "name": "webauthn",
+      "group": "lbuchs",
+      "version": "2.2.0",
+      "description": "WebAuthn server library, bundled unchanged in portal/common/vendor/WebAuthn/",
+      "licenses": [ { "license": { "id": "MIT" } } ],
+      "purl": "pkg:composer/lbuchs/webauthn@2.2.0",
+      "externalReferences": [ { "type": "vcs", "url": "https://github.com/lbuchs/WebAuthn" } ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/qrcode-generator@1.4.4",
+      "name": "qrcode-generator",
+      "version": "1.4.4",
+      "description": "QR code generator by Kazuhiko Arase, bundled unchanged as portal/common/qrcode.js",
+      "licenses": [ { "license": { "id": "MIT" } } ],
+      "purl": "pkg:npm/qrcode-generator@1.4.4",
+      "externalReferences": [ { "type": "vcs", "url": "https://github.com/kazuhikoarase/qrcode-generator" } ]
+    }
+  ],
+  "dependencies": [
+    { "ref": "hinschg-meldekanal", "dependsOn": ["pkg:composer/lbuchs/webauthn@2.2.0", "pkg:npm/qrcode-generator@1.4.4"] }
+  ]
+}

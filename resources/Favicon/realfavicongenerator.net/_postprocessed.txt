@@ -1,0 +1,4 @@
+Die Dateien wurden mit https://realfavicongenerator.net/ erstellt.
+Die PNGs wurden danach mit "for i in *.png;do optipng $i;done" verkleinert.
+Das favicon.ico war fast 15kB groß – weil es mit 8bit Farbtiefe und 8bit Alpha-Kanal generiert wurde.
+Wenn man es in GIMP lädt und als .ico exportiert, kann man die Kompression wählen: 4bit Farbtiefe und 1bit Aplha reicht!

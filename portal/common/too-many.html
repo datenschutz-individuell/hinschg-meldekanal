@@ -1,0 +1,30 @@
+<!doctype html>
+<!--
+  SPDX-FileCopyrightText: 2026 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>
+  SPDX-License-Identifier: LicenseRef-hinschg-meldekanal
+-->
+<!-- 429 (nginx throttling, scripts/hinweise-throttle.conf): static like error-50x.html so rejected requests start no PHP.
+     Customer logo and colours from logo.svg/style.css. -->
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Bitte kurz warten</title>
+<link rel="stylesheet" href="/fonts.css"><link rel="stylesheet" href="/style.css">
+<style>
+:root { --farbe-text:#222; --farbe-hintergrund:#fff; --farbe-ueberschrift:var(--farbe-text); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --farbe-text:#eee; --farbe-hintergrund:#1c1c1c; } }
+body { font-family:var(--schrift, system-ui, sans-serif); font-size:var(--schriftgroesse, 1.05rem); line-height:1.6; color:var(--farbe-text); background:var(--farbe-hintergrund);
+    max-width:var(--seitenbreite, 40rem); margin:1.5rem auto; padding:0 1rem; }
+.logo { display:block; max-height:5rem; max-width:60%; margin:0 0 2rem auto; }
+.symbol { display:block; width:4.5rem; height:4.5rem; margin:0 auto; color:var(--farbe-link, #0b62a4); }
+h1 { text-align:center; }
+@media (max-width:600px) { body { padding:0 10px; } }   /* like the portal pages on mobile */
+h1, h2 { font-family:var(--schrift-ueberschrift, inherit); color:var(--farbe-ueberschrift); line-height:1.25; }
+</style></head>
+<body>
+<img class="logo" src="/logo.svg" alt="" onerror="this.remove()">
+<svg class="symbol" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12"/><path d="M6 21h12"/><path d="M7.5 3c0 4.5 4.5 5 4.5 9s-4.5 4.5-4.5 9"/><path d="M16.5 3c0 4.5-4.5 5-4.5 9s4.5 4.5 4.5 9"/></svg>
+<h1>Bitte kurz warten</h1>
+<p>Ihre Eingabe ist noch nicht gespeichert. Von Ihrem Anschluss kam gerade mehrmals ein Formular, zum Beispiel Meldungen. Gehen Sie mit „Zurück“ zum Formular. Ihre Angaben stehen dort meist noch. Senden Sie in 1 Minute noch einmal.</p>
+<h2 lang="en">Please wait a moment</h2>
+<p lang="en">Your entry has not been saved yet because several forms, such as reports, were sent from your connection within a short time. Use your browser’s “Back” button to return to the form – your entries are usually still there – and submit it again in one minute.</p>
+</body>
+</html>

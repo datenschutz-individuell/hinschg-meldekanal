@@ -1,0 +1,22 @@
+{
+  "Domain-Endung": "meldestelle.example.org",
+  "Admin-Mail": "meldestelle@example.org",
+  "Freischaltung": "Registrierung freischalten im Portalordner",
+  "Betreiber": "Beispiel Datenschutz GmbH",
+  "Hoster": "",
+  "Serverstandort": "Musterstadt",
+  "Sicherung_Monate": 0,
+  "Sicherheit": "",
+  "Aufsicht": {
+    "de": {
+      "Name": "Name der zuständigen Datenschutz-Aufsichtsbehörde",
+      "Link": "https://aufsicht.example.org/beschwerde",
+      "Anschrift": [
+        "Postfach 1234",
+        "12345 Musterstadt"
+      ],
+      "Mail": "poststelle@aufsicht.example.org",
+      "Telefon": "+49 123 456789"
+    }
+  }
+}

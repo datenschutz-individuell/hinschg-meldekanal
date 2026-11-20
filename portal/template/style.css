@@ -1,0 +1,14 @@
+/*
+ * SPDX-FileCopyrightText: 2023 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>
+ * SPDX-License-Identifier: LicenseRef-hinschg-meldekanal
+ */
+/* Kundeneigene Farben (optional). Ohne Eintrag gelten die Werte aus common/style.php samt „Farbton“ aus
+   settings.json. Ein :root ohne @media gilt hell UND dunkel; dunkle Werte gehören in den @media-Block.
+   Variablen: --farbe-hintergrund, --farbe-flaeche, --farbe-text, --farbe-text-leise, --farbe-rand,
+   --farbe-akzent, --farbe-akzent-text, --farbe-link, --farbe-link-besucht, --farbe-ueberschrift;
+   abgeleitet (nur bei Bedarf setzen): --farbe-chat-meldende[-titel[-text]], --farbe-chat-team[-titel[-text]],
+   --farbe-chat-rand, --farbe-feld-rand.
+   Danach prüfen: php scripts/check-colors.php portal/common/style.php settings.json style.css (README: Farben)
+:root { }
+@media (prefers-color-scheme: dark) { :root { } }
+*/

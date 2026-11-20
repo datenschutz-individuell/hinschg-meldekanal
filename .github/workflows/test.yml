@@ -1,0 +1,54 @@
+# SPDX-FileCopyrightText: 2026 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>
+# SPDX-License-Identifier: LicenseRef-hinschg-meldekanal
+
+name: Test
+
+# Documentation alone does not run the job: minutes are limited while the repository is private
+on:
+  pull_request:
+    paths-ignore: [ "**.md" ]
+  push:
+    branches: [ main ]
+    paths-ignore: [ "**.md" ]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # README promises PHP 8.4 or newer; production runs 8.5
+        php-versions: [ "8.4", "8.5" ]
+    name: php${{ matrix.php-versions }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up php ${{ matrix.php-versions }}
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring, json, sodium, openssl
+          coverage: none
+          ini-file: development
+
+      - name: Lint
+        shell: bash
+        run: find portal scripts -name '*.php' -not -path '*/vendor/*' -print0 | xargs -0 -n1 php -l | { grep -v '^No syntax errors' || true; }
+
+      # The end-to-end tests (tests/e2e) need a live portal and stay manual
+      - name: Tests
+        shell: bash
+        run: |
+          f=0
+          for t in tests/*-test.sh; do echo "::group::$t"; bash "$t" || f=1; echo "::endgroup::"; done
+          exit $f

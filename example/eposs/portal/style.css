@@ -1,0 +1,26 @@
+/*
+ * SPDX-FileCopyrightText: 2026 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>
+ * SPDX-License-Identifier: LicenseRef-hinschg-meldekanal
+ */
+/* Fictitious example company EPOSS GmbH: brand colour petrol, from logo.svg. Party colours, then
+   php scripts/derive-colors.php … >> style.css (lines below), checked with scripts/check-colors.php. */
+:root {
+  --farbe-akzent: #0f766e;
+  --farbe-akzent-text: #ffffff;
+  --farbe-link: #0f766e;
+  --farbe-ueberschrift: #0f766e;
+  --farbe-partei-meldende: #0f766e;
+  --farbe-partei-team: #808080;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --farbe-akzent: #2dd4bf;
+    --farbe-akzent-text: #04211f;
+    --farbe-link: #2dd4bf;
+    --farbe-ueberschrift: #2dd4bf;
+    --farbe-partei-meldende: #2dd4bf;
+    --farbe-partei-team: #808080;
+  }
+}
+@media (prefers-color-scheme: light) { :root { --farbe-chat-meldende-titel-text:#04211f; --farbe-chat-meldende-text:#242424; --farbe-chat-team-titel-text:#202020; --farbe-chat-team-text:#242424; --farbe-chat-status:#6f6f6f; --farbe-chat-meldende-balken:#0f766e; --farbe-chat-team-balken:#808080 } }
+@media (prefers-color-scheme: dark) { :root { --farbe-chat-meldende-titel-text:#d6f7f3; --farbe-chat-meldende-text:#dfdfdf; --farbe-chat-team-titel-text:#e6e6e6; --farbe-chat-team-text:#dbdbdb; --farbe-chat-status:#909090; --farbe-chat-meldende-balken:#2dd4bf; --farbe-chat-team-balken:#808080 } }

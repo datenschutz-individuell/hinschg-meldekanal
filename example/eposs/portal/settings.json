@@ -1,0 +1,17 @@
+{
+  "Firma": "EPOSS GmbH",
+  "Title": "Interne Meldestelle nach HinSchG",
+  "Level": "optional",
+  "Farbton": "174",
+  "Webseite": "https://eposs.example/",
+  "Impressum": "https://eposs.example/impressum",
+  "Team": "Erika Mustermann und Max Mustermann",
+  "Anschrift": "Musterstraße 1, 12345 Musterstadt<br>info@eposs.example<br>+49 1234 5678-0",
+  "DS-Mail": "datenschutz@eposs.example",
+  "Sprachen": [
+    "de"
+  ],
+  "Sprachen_in_Pruefung": [
+    "en"
+  ]
+}

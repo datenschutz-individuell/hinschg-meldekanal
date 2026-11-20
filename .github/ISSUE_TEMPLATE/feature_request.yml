@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2026 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>
+# SPDX-License-Identifier: LicenseRef-hinschg-meldekanal
+
+name: 🚀 Wunsch
+description: Etwas, das das Portal können sollte
+labels: [ enhancement ]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Was möchten Sie erreichen?
+      description: Die Situation, nicht die Lösung – es gibt oft mehr als eine.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Wie Sie es sich vorstellen
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Wie Sie es heute lösen
+      description: Ein Umweg zeigt, was die fehlende Funktion kostet.

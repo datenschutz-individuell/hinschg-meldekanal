@@ -1,0 +1,29 @@
+<!doctype html>
+<!--
+  SPDX-FileCopyrightText: 2026 Olav Seyfarth, Contributors <https://github.com/datenschutz-individuell/hinschg-meldekanal/blob/main/CONTRIBUTORS.md>
+  SPDX-License-Identifier: LicenseRef-hinschg-meldekanal
+-->
+<!-- Server errors (500/502/503/504): static, since PHP may not be running then. Customer logo and colours from logo.svg/style.css. -->
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Kurze Pause</title>
+<link rel="stylesheet" href="/fonts.css"><link rel="stylesheet" href="/style.css">
+<style>
+:root { --farbe-text:#222; --farbe-hintergrund:#fff; --farbe-ueberschrift:var(--farbe-text); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --farbe-text:#eee; --farbe-hintergrund:#1c1c1c; } }
+body { font-family:var(--schrift, system-ui, sans-serif); font-size:var(--schriftgroesse, 1.05rem); line-height:1.6; color:var(--farbe-text); background:var(--farbe-hintergrund);
+    max-width:var(--seitenbreite, 40rem); margin:1.5rem auto; padding:0 1rem; }
+.logo { display:block; max-height:5rem; max-width:60%; margin:0 0 2rem auto; }
+.symbol { display:block; width:4.5rem; height:4.5rem; margin:0 auto; color:var(--farbe-link, #0b62a4); }
+h1 { text-align:center; }
+@media (max-width:600px) { body { padding:0 10px; } }   /* like the portal pages on mobile */
+h1, h2 { font-family:var(--schrift-ueberschrift, inherit); color:var(--farbe-ueberschrift); line-height:1.25; }
+</style></head>
+<body>
+<img class="logo" src="/logo.svg" alt="" onerror="this.remove()">
+<svg class="symbol" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
+<h1>Kurze Pause</h1>
+<p>Das Portal ist gerade nicht erreichbar. Meist dauert das nur wenige Minuten. Bitte versuchen Sie es gleich noch einmal. Ihre Meldung ist noch nicht gespeichert. Gehen Sie mit „Zurück“ zum Formular. Ihre Angaben stehen dort meist noch.</p>
+<h2 lang="en">A short break – we’ll be right back</h2>
+<p lang="en">The portal is currently unavailable, usually only for a few minutes. Please try again shortly. A report you started has not been saved yet – use “Back” to return to the form, your entries are usually still there.</p>
+</body>
+</html>
