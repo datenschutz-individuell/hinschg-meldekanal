@@ -12,6 +12,10 @@
 
 Nico Kluge (klugecoded GmbH) hat die erste Fassung 2023 im Auftrag programmiert, nach einem gemeinsam erarbeiteten Konzept.
 
+## Gestaltung und Tests
+
+Wolli Ruf hat CSS beigesteuert und die Darstellung auf Mobilgeräten getestet.
+
 ## KI-Einsatz
 
 Aufbau und Grundfunktionen des Portals sind ohne KI entstanden. Seitdem entstehen Erweiterungen und Verbesserungen mit KI-Unterstützung. Bevor eine Änderung ins Repository kommt, sieht sie sich ein Mensch an.
